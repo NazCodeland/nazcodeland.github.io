@@ -28,7 +28,63 @@ body {
 /* Reduced transparency for users who prefer it */
 @media (prefers-reduced-transparency: reduce) {
   .card {
-    background-color: rgba(255, 255, 255, 1);
-    /* Remove transparency */
+    opacity: 0.5 !important;
+  }
+}
+
+
+@media (prefers-color-scheme: dark) {
+  .card {
+    background-color: yellowgreen !important;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .card {
+    background-color: orange !important;
+  }
+}
+
+
+@media (prefers-contrast: more) {
+  .card {
+    outline: 2px solid red;
+  }
+}
+
+@media (prefers-contrast: less) {
+  .card {
+    outline: 2px solid black;
+  }
+}
+
+@media (prefers-contrast: custom) {
+  .card {
+    outline: 2px solid brown;
+  }
+}
+
+@media print {
+  .card {
+    background: repeating-linear-gradient(45deg, yellow, yellow 10px, red 10px, red 20px);
+  }
+}
+
+
+@media (color-gamut: srgb) {
+  .card {
+    background-color: green;
+  }
+}
+
+@media (color-gamut: p3) {
+  .card {
+    background-color: silver;
+  }
+}
+
+@media (color-gamut: rec2020) {
+  .card {
+    background-color: tomato;
   }
 }
